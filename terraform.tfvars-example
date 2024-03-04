@@ -1,0 +1,33 @@
+project_id = ""
+
+metal_cluster = {
+  "dallas" = {
+    plan             = "m3.small.x86"
+    metro            = "da"
+    operating_system = "ubuntu_22_04"
+    billing_cycle    = "hourly"
+    vxlan            = 1005
+    network_type     = "hybrid-bonded"
+    port_name        = "bond0"
+    ip               = "192.168.105.101"
+    netmask          = "255.255.255.0"
+  },
+  "amsterdam" = {
+    plan             = "m3.small.x86"
+    metro            = "am"
+    operating_system = "ubuntu_22_04"
+    billing_cycle    = "hourly"
+    vxlan            = 1005
+    network_type     = "hybrid-bonded"
+    port_name        = "bond0"
+    ip               = "192.168.105.102"
+    netmask          = "255.255.255.0"    
+  }
+}
+
+dedicated_port_uuid = ""
+metro_a = "DA"
+metro_z = "AM"
+vxlan = 1005
+dedicated_fabric_connection_uuid = "" // existing of the dedicated port
+dedicated_port_id = "" // existing of the primary dedicated port
