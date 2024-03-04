@@ -1,5 +1,7 @@
-# terraform-provider-template
-Template repository for terraform modules
+# Metal to Fabric to Metal
+This repository shows the example of automation to stratch a vlan from Metal device in one metro to the same vlan on Metal device in different metro
+
+> Please note that this demo/code doesn't follow the best practices recommended by the Equinix
 
 ## Table of Contents
 - [Pre-requirement](#pre-requirements)
@@ -18,12 +20,10 @@ Template repository for terraform modules
 
 ↥ [back to top](#table-of-contents)
 
-The full examples are in the `examples` folder. The basic usage would be
 
 ```bash
-module "this" {
-  source = ""
-}
+git clone
+
 ```
 
 ## Inputs

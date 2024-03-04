@@ -20,7 +20,11 @@ resource "equinix_metal_device" "this" {
   tags                = ["${random_pet.this.id}-${each.value.metro}"]
   project_id          = var.project_id
   project_ssh_key_ids = [module.key.id]
-  //user_data        = data.ignition_config.example.rendered
+  user_data = templatefile("${path.module}/bootstrap/vlans.sh", {
+    VLAN    = each.value.vxlan
+    IP      = each.value.ip
+    NETMASK = each.value.netmask
+  })
 }
 
 // vlan for metal
